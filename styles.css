@@ -1,1 +1,83 @@
+:root {
+  --fon-color: #151419;
+  --color-accent: #f56e0f;
+  --color-addition: #1b1b1e;
+  --text-color: #878787;
+}
 
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fon-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#Frame{
+    width: 90%;
+    height: 90%;
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#Header{
+    width: 97%;
+    height: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+#menu{
+    display: none;
+}
+#Menu{
+    width: 5%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-accent);
+}
+#ContainerMenu{
+    background-color: var(--fon-color);
+    position: absolute;
+    padding: 0;
+    margin: 5% 0 0 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity 0.65s ease-in-out;
+}
+#menu:checked ~ #ContainerMenu{
+    opacity: 1;
+    visibility: visible;
+}
+#Content{
+    width: 95%;
+    height: 86%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+.foto{
+    background-color: var(--color-addition);
+    height: 30%;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    padding: 0;
+}
+.foto:hover{
+    position: absolute;
+    background-color: var(--fon-color);
+    height: 89%;
+}
+#Footer{
+    width: 50%;
+    height: 7%;
+}
